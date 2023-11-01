@@ -1,5 +1,5 @@
 <template>
-    <div class="LoginDialog " @click="$emit('dismiss')" v-if="props.visible">
+    <div class="LoginDialog " v-if="props.visible">
         <div class="content" @click.stop="stop">
             <el-icon @click="cancel" class="close"><Close /></el-icon>
             <div class="body">
@@ -35,7 +35,7 @@
 
 <script setup>
 	import {reactive, ref} from 'vue';
-		import {tokenStore, accountStore, tokenStoreWidthOut, accountStoreWidthOut} from '../stores/user';
+	import {tokenStore, accountStore, tokenStoreWidthOut, accountStoreWidthOut} from '../stores/user';
     import {login,register} from "../api/login";
 	import {ElMessage} from "element-plus";
 	import {Eleme} from '@element-plus/icons-vue';
@@ -122,7 +122,7 @@
                         })
                         // 把信息存储到全局变量中
                         tokenStoreWidthOut().setToken(res.data.token)
-                        accountStoreWidthOut().setAccount(user)
+                        accountStoreWidthOut().setAccountId(res.data.id)
 	                    state.register ? state.register=!state.register:cancel()
                     } else {
                         ElMessage.error("账号或验证码错误！")
@@ -139,7 +139,7 @@
 <style scoped lang="less">
     .LoginDialog {
         z-index: 10;
-        position: absolute;
+        position: fixed;
         top: 0;
         bottom: 0;
         left: 0;
@@ -236,7 +236,5 @@
                 }
             }
         }
-
-
     }
 </style>

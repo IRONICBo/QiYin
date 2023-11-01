@@ -23,6 +23,11 @@ const router = createRouter({
       name: 'login',
       component:LoginView
     },
+    // {
+    //   path: '/user',
+    //   name: 'user',
+    //   component:UserView
+    // }
   ]
 })
 

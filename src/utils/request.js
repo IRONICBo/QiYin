@@ -47,7 +47,7 @@ service.interceptors.response.use(
       if (response.headers.msg) {
         response.data.msg = decodeURI(response.headers.msg);
       }
-      if (response.data.data.token) {
+      if (response.data.data !== null && response.data.data.token) {
         tokenStoreWidthOut().setToken(response.data.data.token);
       }
       return response.data;

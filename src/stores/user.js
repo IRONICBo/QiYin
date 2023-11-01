@@ -1,5 +1,7 @@
 import { defineStore } from 'pinia';
 import { store } from './index';
+import StorageUtil from '../utils/localStorage';
+
 
 export const tokenStore = defineStore('token',{
   state: () => ({
@@ -13,6 +15,7 @@ export const tokenStore = defineStore('token',{
   actions: {
     setToken(token) {
       this.token = token;
+      StorageUtil.set("token",token)
     },
   },
   persist: {
@@ -27,30 +30,28 @@ export const tokenStore = defineStore('token',{
 });
 
 export const accountStore = defineStore({
-  id: 'user',
+  id: 'accountId',
   state: () => ({
-    account: {
-      name:'',
-      password:''
-    },
+    accountId: '',
   }),
   getters: {
     getAccount() {
-      return this.account;
+      return this.accountId;
     },
   },
   actions: {
-    setAccount(account) {
-      this.account = account;
+    setAccountId(id) {
+      this.accountId = id;
+      StorageUtil.set("accountId",id)
     },
   },
   persist: {
     enabled: true,
     strategies: [
       {
-        key: 'account',
+        key: 'accountId',
         storage: localStorage,
-        paths: ['account'],
+        paths: ['accountId'],
       },
     ],
   },
