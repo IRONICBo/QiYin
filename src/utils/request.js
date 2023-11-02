@@ -4,12 +4,16 @@ import router from "@/router/index";
 import {ElMessage} from "element-plus";
 import {tokenStoreWidthOut} from "../stores/user";
 
-const service = axios.create({
-  baseURL: '/api',
+const host = import.meta.env.VITE_BASE_PATH;
+const port = import.meta.env.VITE_SERVER_PORT;
+
+const request = axios.create({
+  baseURL: '/api/v1',
   timeout: 99999,
+  withCredentials: true,
 });
 
-service.interceptors.request.use(
+request.interceptors.request.use(
   (config) => {
     // if (!config.donNotShowLoading) {
     //   showLoading();
@@ -35,7 +39,7 @@ service.interceptors.request.use(
   }
 );
 
-service.interceptors.response.use(
+request.interceptors.response.use(
   (response) => {
     // if (!response.config.donNotShowLoading) {
     //   closeLoading();
@@ -77,4 +81,4 @@ service.interceptors.response.use(
     return error;
   }
 );
-export default service;
+export default request;

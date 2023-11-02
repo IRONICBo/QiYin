@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../view/HomeView.vue'
 import LoginView from '../view/LoginView.vue'
 
 const router = createRouter({
@@ -8,7 +7,14 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: () => import('@/view/layout/index.vue'),
+      children: [
+        {
+          path: '/upload',
+          name: 'upload',
+          component: () => import('@/view/upload/index.vue')
+        }
+      ]
     },
     {
       path: '/about',

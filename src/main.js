@@ -7,7 +7,7 @@ import ElementPlus from 'element-plus';
 import 'element-plus/theme-chalk/index.css';
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import piniaPersist from 'pinia-plugin-persist'
-import './assets/main.css'
+import './assets/index.css'
 
 const app = createApp(App)
 
