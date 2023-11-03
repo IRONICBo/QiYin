@@ -4,7 +4,7 @@ import StorageUtil from "../utils/localStorage";
 // 热词
 export const getHots = (params) => {
 	return axios({
-		url: "/api/v1/video/hots",
+		url: "/video/hots",
 		method: "get",
 		params,
 		config: {
@@ -19,7 +19,7 @@ export const getHots = (params) => {
 //搜索 视频
 export const goSearch = (params) => {
 	return axios({
-		url: "/api/v1/video/search",
+		url: "/video/search",
 		method: "get",
 		params,
 		config: {

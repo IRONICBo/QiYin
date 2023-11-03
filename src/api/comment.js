@@ -3,7 +3,7 @@ import StorageUtil from '../utils/localStorage';
 //根据videoId 获取到评论列表
 export const getComment = (params) => {
 	return axios({
-		url: "/api/v1/comment/list",
+		url: "/comment/list",
 		method: "get",
 		params,
 		config: {
@@ -17,7 +17,7 @@ export const getComment = (params) => {
 //添加评论
 export const addComment = (params) => {
 	return axios({
-		url: "/api/v1/comment/add",
+		url: "/comment/add",
 		method: "post",
 		params,
 		config: {
@@ -32,7 +32,7 @@ export const addComment = (params) => {
 //删除评论
 export const delComment = (params) => {
 	return axios({
-		url: "/api/v1/comment/delete",
+		url: "/comment/delete",
 		method: "post",
 		params,
 		config: {

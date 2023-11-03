@@ -1,12 +1,63 @@
 <script setup>
-import { ref } from 'vue';
+	import {ref, watch} from 'vue';
 import { computed, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
-import { Search } from '@element-plus/icons-vue'
+import Search from '../../../components/Search.vue'
+import LoginDialog from '../../../components/LoginDialog.vue'
+import {checkToken, getUserInfo} from '../../../api/login'
+import {loginStoreWidthOut} from '../../../stores/user';
 
-// TODO: Get the recommend search from backend  
-const recommendSearch = ref('华中科技大学')
+import { reactive} from "vue";
+import StorageUtil from "../../../utils/localStorage";
+const state = reactive({
+	isLoginVisible:false,
+	isLogin:false,
+    userInfo:{}
+})
+const changeVisible=(val)=>{
+	state.isLoginVisible=val
+}
 
+const changeLogin=(val)=>{
+	state.isLogin=val
+}
+
+// 获取token 如果有效  则直接就是登录状态
+const check =()=>{
+	checkToken().then((res) => {
+        if (res.code === 200) {
+            state.isLogin = true
+	        loginStoreWidthOut().setLoginStatus(true)
+            state.userInfo = res.data
+        } else {
+            console.log("登录失败")
+        }
+    }).catch(error=>{
+        console.log("失败")
+    })
+}
+
+
+onMounted(() => {
+	check()
+})
+
+watch(()=>[state.isLogin],([newIsLogin],[oldIsLogin])=>{
+    if (newIsLogin && newIsLogin !== oldIsLogin && !state.userInfo.name) {
+	    check()
+    }
+})
+
+    const gotoUser=()=>{
+	//  点击跳转到用户信息页面
+    }
+
+    const handleClick =()=>{
+      StorageUtil.remove("token")
+      StorageUtil.remove("accountId")
+      loginStoreWidthOut().setLoginStatus(false)
+      state.isLogin =false
+    }
 </script>
 
 <template>
@@ -28,18 +79,7 @@ const recommendSearch = ref('华中科技大学')
     <div class="flex-grow" />
 
     <el-menu-item index="1">
-        <el-input
-            class="qiyin-search-input"
-            v-model="input1"
-            size="large"
-            :placeholder="recommendSearch"
-        >
-        <template #append>
-            <el-button type="danger">
-            <el-icon><Search /></el-icon>
-            搜索</el-button>
-        </template>
-        </el-input>
+        <Search/>
     </el-menu-item>
 
     <div class="flex-grow" />
@@ -60,17 +100,43 @@ const recommendSearch = ref('华中科技大学')
     </el-menu-item>
 
     <el-menu-item index="3">
-        <el-button type="danger" class="login-button" plain round>
+        <el-button type="danger" class="login-button" plain round @click="state.isLoginVisible=true" v-if="!state.isLogin">
             <el-icon><Avatar /></el-icon>
             登录</el-button>
+        <el-dropdown v-else trigger="hover">
+            <div class="block"  @click="gotoUser">
+                <el-avatar :size="35" :src="state.userInfo.avatar" style="margin-right: 6px"/>
+                <span>{{state.userInfo.name || "用户"}}</span>
+            </div>
+            <template #dropdown>c
+                <el-dropdown-menu>
+                    <el-dropdown-item @click="handleClick">登出</el-dropdown-item>
+                </el-dropdown-menu>
+            </template>
+        </el-dropdown>
     </el-menu-item>
   </el-menu>
+    <LoginDialog
+        title="登录"
+        subtitle="收藏点赞评论随心发"
+        :visible="state.isLoginVisible"
+        @changeVisible="changeVisible"
+        @changeLogin="changeLogin"
+    />
 </template>
 
 <style lang="less" scoped>
-.flex-grow {
-  flex-grow: 1;
-}
+    .el-menu--horizontal>.el-menu-item .is-active:nth-child(1){
+        align-items:  self-start !important;
+        margin-top: 7px;
+    }
+
+    .el-menu--horizontal .el-menu-item:not(.is-disabled):focus, .el-menu--horizontal .el-menu-item:not(.is-disabled):hover{
+        background: rgba(1,1,1,0) !important;
+    }
+    .flex-grow {
+      flex-grow: 1;
+    }
 
 .login-button {
     padding: 18px 20px;
@@ -83,6 +149,8 @@ const recommendSearch = ref('华中科技大学')
 .el-menu-item.is-active {
     // cancel choose
     border: 0px !important;
+    align-items:  self-start !important;
+    margin-top: 8px;
 }
 
 .icon-with-info {
@@ -106,6 +174,14 @@ const recommendSearch = ref('华中科技大学')
         // elementui icon contans this property
         margin-right: 5px;
     }
+}
+
+.block{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 3px;
 }
 
 .input-with-select .el-input-group__prepend {

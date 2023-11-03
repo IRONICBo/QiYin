@@ -36,19 +36,19 @@
 
 <template>
     <div class="about" id="login">
-        <button @click="state.isLoginVisible=true">登录</button>
+<!--        <button @click="state.isLoginVisible=true">登录</button>-->
         <button @click="state.commentVisible=true">评论</button>
         <button @click="favorite">{{state.canFavorite === 1? "点赞":"取消点赞"}}</button>
         <div>
             <Search></Search>
         </div>
     </div>
-    <LoginDialog
-        title="登录"
-        subtitle="收藏点赞评论随心发"
-        :visible="state.isLoginVisible"
-        @changeVisible="changeVisible"
-    />
+<!--    <LoginDialog-->
+<!--        title="登录"-->
+<!--        subtitle="收藏点赞评论随心发"-->
+<!--        :visible="state.isLoginVisible"-->
+<!--        @changeVisible="changeVisible"-->
+<!--    />-->
     <CommentDrawer
             :modelVisible="state.commentVisible"
             @changeVisible="closeComments"

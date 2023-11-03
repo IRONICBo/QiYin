@@ -1,19 +1,21 @@
 <template>
     <div class="search" ref="searchRef">
-        <div class="input" style="display: flex">
+        <div class="input">
             <el-input
                     v-model="state.searchValue"
                     class="w-50 m-2"
                     size="large"
                     :placeholder="state.placeholder"
-                    clearable
                     @keyup.enter="send"
+                    :disabled="state.loading"
             >
-<!--              todo  @blur="state.showDiv=false"-->
-                <template #append @click="send" style="cursor: pointer">
-                    <el-button type="danger">
+                <template #append  style="cursor: pointer">
+                    <el-button type="danger" @click="send" v-if="!state.loading">
                         <el-icon style="margin-right:3px"><Search /></el-icon>
                         搜索</el-button>
+                    <el-button type="danger" v-else>
+                        <el-icon style="margin-right:3px" class="is-loading"><Loading /></el-icon>
+                        搜索中</el-button>
                 </template>
             </el-input>
         </div>
@@ -61,7 +63,7 @@
     import utils from "../utils/index"
     import {ElMessage} from "element-plus";
     import StorageUtil from '../utils/localStorage';
-    import {onMounted} from "@vue/runtime-core";
+		import {onMounted, onUnmounted} from "@vue/runtime-core";
     import {getHots ,goSearch} from '../api/search'
 
 	let state = reactive({
@@ -75,33 +77,35 @@
 	})
 		const searchRef = ref();
 
-		onMounted(() => {
+	onMounted(() => {
 	    window.addEventListener('resize', () => {
 		    state.isPhone = document.documentElement.clientWidth < 768?'btt':'rtl'// 小于993视为平板及手机
         })
-	    getVideoHots()
-	    getHistory()
     //      监听点击事件
-	    document.addEventListener('click', handlerClick,true)
+	    document.addEventListener('click', handlerClick)
     })
 
+    onUnmounted(() => {
+        window.removeEventListener('click', handlerClick)
+    })
 	watch(()=>[state.showDiv],([newShowDiv],[oldShowDiv])=>{
-		if (newShowDiv && state.hots.length) {
+		if (newShowDiv && newShowDiv !== oldShowDiv && !state.hots.length) {
            getVideoHots()
            getHistory()
 		}
 	})
 
     const handlerClick =(e)=>{
-          if (e.target.className === "el-input__inner"){
+          if (e.target.className === "el-input__inner" || e.target.className === "el-menu-item is-active"){
               state.showDiv = true
               return
           }
           if(!utils.isGrandchild(e.target,searchRef.value)){
                 state.showDiv = false
-            state.searchValue=""
+                state.searchValue=""
           }
     }
+
 
     const getHistory =()=>{
 	    state.historys = StorageUtil.get("historys") || []
@@ -163,13 +167,12 @@
         }
     }
 
-    const gotoSearch =async()=>{
-	    await utils.$sleep(500)
+    const gotoSearch =()=>{
 	    state.loading = true
 	    goSearch( { searchValue:state.searchValue} ).then((res) => {
 		    if (res.code === 200) {
 			    //     todo 要进行跳转
-
+                console.log("成功")
 		    } else {
 			    state.searchValue = ''
 			    ElMessage.error("搜索失败！")
@@ -193,34 +196,35 @@
     }
 
     .search {
-        position: fixed;
-        top: 20px;
-        left: 35%;
-        width: 30%;
         z-index: 5;
-        display: flex;
-        flex-direction: column;
+        border-radius: var(--el-input-border-radius, var(--el-border-radius-base)) var(--el-input-border-radius, var(--el-border-radius-base)) 8px 8px;
+        width: 400px;
         background: white;
+        line-height: normal;
+
 
         .input{
+            width: 400px;
         }
 
         .wrapper {
-            width: 100%;
             padding: 15px;
             border: 1px solid #dcdfe6;
             border-bottom-left-radius: 8px;
             border-bottom-right-radius: 8px;
-
             .history{
                 margin-bottom: 15px;
+                width: 370px;
 
                 .title-row{
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
+                    line-height: normal;
                     .title{
                         font-weight: bold;
+                        font-size: 15px;
+                        color: #636363;
                     }
                     .icon{
                         font-size: 13px;
@@ -232,6 +236,10 @@
                         justify-content: center;
                         height: 100%;
                     }
+
+                    .icon :hover{
+                        color: #b6b6b6;
+                    }
                 }
 
                 .history-wrapper{
@@ -239,20 +247,29 @@
                     flex-direction: row;
                     flex-wrap: wrap;
                     margin-top: 10px;
+                    line-height: normal;
 
                     .his-item{
                         margin: 3px 5px;
                         cursor: pointer;
+                        line-height: normal;
+                    }
+
+                    .his-item:hover{
+                        color:blue;
                     }
                 }
             }
 
             .hots{
+                line-height: normal;
                 .title{
                     font-weight: bold;
+                    font-size: 15px;
+                    color: #636363;
                 }
                 .hot-ul{
-                    width: 100%;
+                    /*width: 100%;*/
                     padding: 8px;
 
                     .hot-li{
@@ -264,7 +281,7 @@
                             color: gray;
                         }
                         .hot-item{
-
+                            color: #262626;
                         }
                     }
                     .hot-li :hover{
@@ -276,32 +293,32 @@
             }
         }
     }
-    @media (min-width: 1024px) {
-        .search{
-            width: 30%;
-            .wrapper {
-                padding: 15px;
-            }
-        }
-    }
+    /*@media (min-width: 1024px) {*/
+    /*    .search{*/
+    /*        width: 30%;*/
+    /*        .wrapper {*/
+    /*            padding: 15px;*/
+    /*        }*/
+    /*    }*/
+    /*}*/
 
-    @media (min-width: 700px) and (max-width: 1024px){
-        .search{
-            width: 76%;
-            left: 12%;
-            .wrapper {
-                padding: 15px;
-            }
-        }
-    }
+    /*@media (min-width: 700px) and (max-width: 1024px){*/
+    /*    .search{*/
+    /*        width: 76%;*/
+    /*        left: 12%;*/
+    /*        .wrapper {*/
+    /*            padding: 15px;*/
+    /*        }*/
+    /*    }*/
+    /*}*/
 
-    @media (min-width: 200px) and (max-width: 700px){
-        .search{
-            width: 90%;
-            left: 5%;
-            .wrapper {
-                padding: 7px;
-            }
-        }
-    }
+    /*@media (min-width: 200px) and (max-width: 700px){*/
+    /*    .search{*/
+    /*        width: 90%;*/
+    /*        left: 5%;*/
+    /*        .wrapper {*/
+    /*            padding: 7px;*/
+    /*        }*/
+    /*    }*/
+    /*}*/
 </style>
