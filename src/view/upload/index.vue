@@ -59,7 +59,7 @@ const handleFileUpload = (params) => {
 
 <template>
     <el-card class="upload">
-        <el-carousel height="135px">
+        <el-carousel height="160px">
             <el-carousel-item v-for="url in carouselURL" :key="url">
                 <el-image :src="url" :fit="cover" />
             </el-carousel-item>
