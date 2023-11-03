@@ -10,13 +10,6 @@ import {
 } from '@element-plus/icons-vue'
 
 const isCollapse = ref(false)
-const handleOpen = (key, keyPath) => {
-  console.log(key, keyPath)
-}
-const handleClose = (key, keyPath) => {
-  console.log(key, keyPath)
-}
-
 const router = useRouter();
 
 const menuList = ref([
@@ -57,8 +50,6 @@ const menuList = ref([
   <el-menu
     default-active="1"
     class="qiyin-aside"
-    @open="handleOpen"
-    @close="handleClose"
   >
     <el-menu-item index="1">
         <el-icon><Opportunity /></el-icon>

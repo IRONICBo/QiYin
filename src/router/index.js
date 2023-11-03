@@ -13,7 +13,12 @@ const router = createRouter({
           path: '/upload',
           name: 'upload',
           component: () => import('@/view/upload/index.vue')
-        }
+        },
+        {
+          path: '/upload_info',
+          name: 'upload_info',
+          component: () => import('@/view/uploadInfo/index.vue')
+        },
       ]
     },
     {
