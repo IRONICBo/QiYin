@@ -21,9 +21,9 @@ export const register = (params) => {
 		method: "post",
 		params,
 		config: {
-			headers: {
-				'token': tokenStore().token
-			},
+			// headers: {
+			// 	'token': tokenStore().token
+			// },
 			timeout: 3000
 		}
 	})

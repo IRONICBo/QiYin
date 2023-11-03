@@ -82,16 +82,15 @@
         placeholder:StorageUtil.get('token') !== ''? "留下你精彩的评论吧":"请登录后评论",
         delId:0,
         loading:false,
-		isPhone:document.documentElement.clientWidth < 993?'btt':'rtl',
+		isPhone:document.documentElement.clientWidth < 768?'btt':'rtl',
 	})
 
     const emits=defineEmits(['changeVisible'])
 
     onMounted(() => {
 	    window.addEventListener('resize', () => {
-		    state.isPhone = document.documentElement.clientWidth < 993?'btt':'rtl'// 小于993视为平板及手机
+		    state.isPhone = document.documentElement.clientWidth < 768?'btt':'rtl'// 小于993视为平板及手机
         })
-	    getData()
     })
 
     const cancel=() =>{
@@ -140,13 +139,11 @@
 			    res.data.forEach(item => {
 				    const formattedItem = {
 					    id: item.id,
-					    avatar: item.user_info.avatar,
-					    name: item.user_info.name,
+					    avatar: item.author.avatar || "",
+					    name: item.author.name,
 					    text: item.content,
-					    loveNum: item.user_info.total_favorited,
-					    isLoved: false,
 					    time: utils.$time(item.create_date),
-					    canDel: userId === item.user_info.id
+					    canDel: userId === item.author.id
 				    }
 				    formattedData.push(formattedItem)
 			    })
@@ -188,9 +185,6 @@
 </script>
 
 <style lang="less" scoped>
-    ::v-deep .el-drawer__header {
-        margin:0px !important;
-    }
         .comment {
         height: v-bind(height);
         background: #fff;
