@@ -1,1 +1,696 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 261.76 226.69"  xmlns:v="https://vecta.io/nano"><path d="M161.096.001l-30.225 52.351L100.647.001H-.005l130.877 226.688L261.749.001z" fill="#41b883"/><path d="M161.096.001l-30.225 52.351L100.647.001H52.346l78.526 136.01L209.398.001z" fill="#34495e"/></svg>
+<svg width="72" height="22" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="navbar-logo">
+ <defs>
+  <polygon id="DCG09ebRYZ__path-1" points="0 0 30.5205 0 30.5205 20.33 0 20.33"/>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_4_blur">
+   <feGaussianBlur stdDeviation="0.2" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="0" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="1.4" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="1.7" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="1.7" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="1.8" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="1.9" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="1.9" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2.1" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2.1" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2.1" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2.2" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2.2" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2.2" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2.2" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2.3" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2.3" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2.3" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2.3" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2.3" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2.4" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2.4" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2.4" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2.5" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2.5" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2.5" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2.6" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2.6" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2.7" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2.8" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2.8" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2.9" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3.1" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3.1" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3.2" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3.2" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3.3" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3.3" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3.3" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3.3" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3.4" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3.4" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3.5" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3.5" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3.5" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3.6" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3.6" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3.6" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3.6" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3.7" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3.7" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3.8" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3.8" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3.8" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3.9" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="4" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="4" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="4.1" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="4.4" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="4.4" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="4.5" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="4.6" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="4.6" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="4.7" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="4.8" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="4.8" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="4.9" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="4.9" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.1" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.1" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.2" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.2" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.2" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.2" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.3" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.3" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.4" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.4" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.4" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.4" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.5" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.5" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.6" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.6" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.7" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.8" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.8" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.8" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.8" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.9" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.9" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="6" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="6.1" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="6.1" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="6.2" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="6.2" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="6.3" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="6.4" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="6.5" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="6.5" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="6.5" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="6.6" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="6.6" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="6.6" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="6.6" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="6.7" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="6.8" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="6.8" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="6.9" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="6.9" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="6.9" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.1" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.1" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.2" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.2" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.2" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.2" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.3" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.3" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.3" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.3" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.4" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.5" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.5" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.5" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.5" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.6" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.6" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.6" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.7" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.8" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.8" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.8" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.9" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.6" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.6" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.5" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.5" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.4" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.3" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.3" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7.3" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="7" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="6.9" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="6.8" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="6.7" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="6.6" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="6.3" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="6.2" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="6.1" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="6.1" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="6" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.9" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.8" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.7" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.4" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.3" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.2" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.1" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5.1" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="5" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="4.9" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="4.9" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="4.8" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="4.7" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="4.6" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="4.5" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="4.2" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="4.2" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="4.1" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3.8" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3.7" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3.4" in="SourceGraphic"/>
+  </filter>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3.3" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="3" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2.9" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2.6" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2.5" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2.1" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="2" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="1.9" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="1.8" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="1.7" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="1.7" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="1.6" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="1.6" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="1.5" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="1.5" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="1.4" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="1.4" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="1.3" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="1.2" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="1.1" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="1.1" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="1" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="1" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="0.9" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="0.8" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="0.8" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="0.8" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="0.7" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="0.6" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="0.6" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="0.6" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="0.5" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="0.4" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="0.4" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="0.3" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="0.3" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="0.3" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="0.2" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="0.2" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="0.2" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="0.1" in="SourceGraphic"/>
+  </filter>
+  <filter id="DCG09ebRYZ__\u9996\u9875_blur">
+   <feGaussianBlur stdDeviation="0" in="SourceGraphic"/>
+  </filter>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <g filter="url(#DCG09ebRYZ__\u9996\u9875_blur)" id="DCG09ebRYZ__\u9996\u9875" fill="none" fill-rule="evenodd">
+   <g id="DCG09ebRYZ__\u5207\u56FE">
+    <g id="DCG09ebRYZ__\u7F16\u7EC4">
+     <g id="svg_1">
+      <mask id="DCG09ebRYZ__mask-2" fill="white">
+       <use xlink:href="#DCG09ebRYZ__path-1" id="svg_2"/>
+      </mask>
+      <g id="DCG09ebRYZ__Clip-2"/>
+      <path d="m30.52052,0.31563c-0.51374,-0.17625 -0.93874,0.0385 -1.1825,0.22175c-3.38099,3.99625 -8.43275,6.534 -14.07774,6.534c-1.93951,0 -3.809,-0.2995 -5.56476,-0.855c-0.45725,-1.65925 -0.7805,-2.83725 -0.7805,-2.83725c0,0 -0.37974,-1.156 -1.665,-0.95775l0.36951,2.99475c-2.49251,-1.13725 -4.68851,-2.8125 -6.437,-4.87925c-0.244,-0.18275 -0.66875,-0.3975 -1.18251,-0.22125c1.46051,3.90675 4.37876,7.101 8.092,8.92475l1.01276,8.2015c0,0 0.45275,3.13825 3.39724,3.13825l6.29801,0c2.94449,0 3.39725,-3.13825 3.39725,-3.13825l0.71174,-5.8775c-1.91225,-0.15575 -3.11475,1.17675 -3.49625,2.49175c-0.64024,2.21425 -0.63949,2.35575 -0.76575,2.742c-0.25849,0.79075 -1.10674,0.885 -1.10674,0.885l-3.77826,0c0,0 -0.84874,-0.09425 -1.10724,-0.885c-0.16651,-0.50925 -0.99801,-3.48825 -1.83501,-6.5105c1.41175,0.39925 2.90126,0.6135 4.44051,0.6135c6.98924,0 12.94875,-4.40275 15.26024,-10.5855" id="DCG09ebRYZ__Fill-1" fill="#00A6E0" mask="url(#DCG09ebRYZ__mask-2)"/>
+     </g>
+     <path d="m77.83473,12.6241l0,-2.203l-13.7235,0l0,2.203l2.52525,0l-1.95276,4.90825l-0.03375,0l0,2.203l11.74301,0c0.73724,-0.05375 1.39975,-0.709 1.39975,-1.38825c0,-0.338 -0.10875,-0.72325 -0.13126,-0.80025l0.00151,0l-0.994,-2.7375l-2.43051,0l0.9885,2.723l-8.16024,0l1.9525,-4.90825l8.8155,0zm-21.37351,-3.3l4.893,0l0,-2.15075l-4.893,0l0,-2.1795l-2.20299,0l0,2.1795l-3.384,0l0.2825,-1.61575l-2.30276,0l-1.17649,6.72925l0.93625,0c0.31174,-0.03125 1.35899,-0.22925 1.62424,-1.47625l0.26,-1.4865l3.76026,0l0,6.563l-6.56951,0l0,2.203l6.56951,0l0,2.16675l2.20299,0l0,-2.16675l5.44876,0l0,-2.203l-5.44876,0l0,-6.563zm-20.74875,-4.307l-2.20299,0l0,2.147l-2.18826,0l0,2.2205l2.18826,0l0,8.966c0.06225,0.741 0.656,1.3295 1.3985,1.38475l8.65325,-0.00025c0.77725,-0.0345 1.40274,-0.6535 1.44724,-1.428l0,-3.5055l-2.199,0l0,2.6785l-7.097,0l0,-8.0955l9.82625,0l0,-2.2205l-9.82625,0l0,-2.147zm28.97125,2.66425l12.55251,0l0,-2.151l-12.55251,0l0,2.151z" id="DCG09ebRYZ__Fill-3" fill="#00A6E0"/>
+    </g>
+   </g>
+  </g>
+  <rect stroke="#000" stroke-width="0" stroke-dasharray="2,2" id="svg_3" height="67" width="90" y="-0.5" x="29" fill="#fff"/>
+  <text style="cursor: text;" filter="url(#svg_4_blur)" font-style="normal" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="'Yrsa'" font-size="15" id="svg_4" y="16.5" x="38" stroke-dasharray="2,2" stroke-width="0" fill="#00A6E0">柒音</text>
+ </g>
+</svg>
