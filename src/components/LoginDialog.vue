@@ -1,10 +1,12 @@
 <template>
     <div class="LoginDialog " v-if="props.visible">
         <div class="content" @click.stop="stop">
-            <el-icon @click="cancel" class="close"><Close /></el-icon>
+            <div class="close-wrapper">
+                <el-icon @click="cancel" class="close"><Close /></el-icon>
+            </div>
             <div class="body">
                 <div class="title" v-if="title">{{ state.register?'注册': props.title }}</div>
-                <div class="subtitle" :class="subtitleColor" v-if="subtitle"><el-icon ><Star class="subicon"/></el-icon>{{ props.subtitle }}</div>
+                <div class="subtitle" v-if="subtitle"><el-icon ><Star class="subicon"/></el-icon>{{ props.subtitle }}</div>
                 <el-form
                     ref="ruleFormRef"
                     :model="user"
@@ -46,13 +48,9 @@
         },
 	    title:String,
 	    subtitle:String,
-	    subtitleColor:{
-	    	type:String,
-            default:'gray'
-        },
     })
     const ruleFormRef = ref()
-    const emits=defineEmits(['changeVisible'])
+    const emits=defineEmits(['changeVisible','changeLogin'])
     let state = reactive({
       loading:false,
       register:false
@@ -124,6 +122,9 @@
                         tokenStoreWidthOut().setToken(res.data.token)
                         accountStoreWidthOut().setAccountId(res.data.id)
 	                    state.register ? state.register=!state.register:cancel()
+                        if(!state.register){
+	                        emits('changeLogin', true)
+                        }
                     } else {
                         ElMessage.error("账号或验证码错误！")
                     }
@@ -138,7 +139,7 @@
 
 <style scoped lang="less">
     .LoginDialog {
-        z-index: 10;
+        z-index: 20;
         position: fixed;
         top: 0;
         bottom: 0;
@@ -157,12 +158,15 @@
             font-size: 15px;
             text-align: center;
 
+            .close-wrapper{
+                text-align: right;
+            }
             .close {
-                position: absolute;
+                text-align: right;
                 top: 6px;
-                right: 6px;
+                right: 10px;
                 cursor: pointer;
-                z-index: 15;
+                z-index: 10;
             }
 
             .body {
@@ -175,8 +179,13 @@
                 .subtitle {
                     margin: 10px;
                     font-size: 13px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
                     .subicon{
-                        padding-top: 3px;
+                        padding-top: 1px;
+                        margin-right: 3px;
                     }
                     &.gray {
                         color: rgb(143, 143, 158);

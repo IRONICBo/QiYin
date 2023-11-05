@@ -90,6 +90,9 @@ const menuList = ref([
 .qiyin-aside {
     padding: 20px 0px;
     height: 100vh;
+    position: fixed;
+    top:60px;
+    z-index: 10
 }
 
 .el-menu-item {

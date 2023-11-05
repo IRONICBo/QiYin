@@ -125,5 +125,16 @@ export default {
     } else {
       return num
     }
+  },
+
+  isGrandchild(grandchild, ancestor){
+    let parent = grandchild.parentNode;
+    while (parent) {
+      if (parent === ancestor) {
+        return true; // 找到匹配的祖先节点
+      }
+      parent = parent.parentNode;
+    }
+    return false; // 没有匹配的祖先节点
   }
 }
