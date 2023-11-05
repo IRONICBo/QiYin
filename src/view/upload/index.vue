@@ -75,7 +75,7 @@ const uploadFile = (file) => {
             console.log("Get uploadInfoStore => ",  videoURL)
             console.log("Get coverURLList => ",  coverURLList)
 
-            router.push('/upload_info');
+            router.push('/uploadInfo');
             ElMessage({
               showClose: true,
               message: '上传成功，请完善视频信息～',

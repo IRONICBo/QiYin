@@ -20,8 +20,8 @@ const router = createRouter({
           component: () => import('@/view/searchResult/index.vue')
         },
         {
-          path: '/upload_info',
-          name: 'upload_info',
+          path: '/uploadInfo',
+          name: 'uploadInfo',
           component: () => import('@/view/uploadInfo/index.vue')
         },
       ]
