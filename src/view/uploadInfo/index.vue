@@ -1,25 +1,34 @@
-<script setup>
+<script setup lang="ts">
 import { onMounted, ref } from 'vue';
-import { UploadFilled } from '@element-plus/icons-vue'
-import { getToken } from '@/api/qiniu';
-import * as qiniu from "qiniu-js";
-import { v4 as uuidv4 } from 'uuid';
-import uploadInfoStoreWidthOut from '@/stores/qiniu'
+// import uploadInfoStoreWidthOut from '@/stores/qiniu'
+
+
+import { inferenceSqueezenet } from '@/utils/predict'
 
 const token = ref('')
-const uploadInfoStore = uploadInfoStoreWidthOut()
+// const uploadInfoStore = uploadInfoStoreWidthOut()
+const videoURL = ref([])
+const coverURLList = ref([])
+
 
 onMounted(async () => {
-    const videoURL = uploadInfoStore.videoURL
-    const coverURLList = uploadInfoStore.coverURLList
-    console.log("Get uploadInfoStore => ",  uploadInfoStore)
-    console.log("Get videoURL => ",  videoURL)
-    console.log("Get coverURLList => ",  coverURLList)
+    // videoURL.value = uploadInfoStore.videoURL
+    // coverURLList.value = uploadInfoStore.coverURLList
+    // console.log("Get uploadInfoStore => ",  uploadInfoStore)
+    // console.log("Get videoURL => ",  videoURL)
+    // console.log("Get coverURLList => ",  coverURLList)
+
+    const url = "./assets/logo.png"
+    // const url = "http://s3h1q0hvd.bkt.clouddn.com/0703b806-699a-415e-abe7-cb726c46abbf_000001.jpg"
+    var [inferenceResult,inferenceTime] =  await inferenceSqueezenet(url)
+    // console.log("inferenceResult => ",  inferenceResult)
+    // console.log("inferenceTime => ",  inferenceTime)
 })
 
 </script>
 
 <template>
+    <img id="img" :src="coverURLList[0]" alt="" />
 </template>
 
 <style lang="less" scoped>
