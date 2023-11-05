@@ -139,7 +139,7 @@
 
 <style scoped lang="less">
     .LoginDialog {
-        z-index: 10;
+        z-index: 20;
         position: fixed;
         top: 0;
         bottom: 0;

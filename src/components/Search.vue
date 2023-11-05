@@ -63,11 +63,15 @@
     import utils from "../utils/index"
     import {ElMessage} from "element-plus";
     import StorageUtil from '../utils/localStorage';
-		import {onMounted, onUnmounted} from "@vue/runtime-core";
+	import {onMounted, onUnmounted} from "@vue/runtime-core";
     import {getHots ,goSearch} from '../api/search'
+	import {useRouter,useRoute} from "vue-router";
 
+    const searchRef = ref();
+    const router = useRouter();
+    const route = useRoute();
 	let state = reactive({
-		searchValue: '',
+		searchValue: router.currentRoute._value.path === "/searchResult"? (route.query.searchValue|| ''):'',
         placeholder:"搜索相关内容",
         showDiv:false,
         loading:false,
@@ -75,7 +79,6 @@
 		historys:[],
 		isPhone:document.documentElement.clientWidth < 768?'btt':'rtl',
 	})
-		const searchRef = ref();
 
 	onMounted(() => {
 	    window.addEventListener('resize', () => {
@@ -83,10 +86,13 @@
         })
     //      监听点击事件
 	    document.addEventListener('click', handlerClick)
-    })
 
+    })
     onUnmounted(() => {
         window.removeEventListener('click', handlerClick)
+	    window.removeEventListener('resize', () => {
+		    state.isPhone = document.documentElement.clientWidth < 768?'btt':'rtl'// 小于993视为平板及手机
+	    })
     })
 	watch(()=>[state.showDiv],([newShowDiv],[oldShowDiv])=>{
 		if (newShowDiv && newShowDiv !== oldShowDiv && !state.hots.length) {
@@ -96,13 +102,12 @@
 	})
 
     const handlerClick =(e)=>{
-          if (e.target.className === "el-input__inner" || e.target.className === "el-menu-item is-active"){
+          if (e.target.className === "el-input__inner" || e.target.getAttribute("tabindex") === 0){
               state.showDiv = true
               return
           }
           if(!utils.isGrandchild(e.target,searchRef.value)){
                 state.showDiv = false
-                state.searchValue=""
           }
     }
 
@@ -168,20 +173,29 @@
     }
 
     const gotoSearch =()=>{
-	    state.loading = true
-	    goSearch( { searchValue:state.searchValue} ).then((res) => {
-		    if (res.code === 200) {
-			    //     todo 要进行跳转
-                console.log("成功")
-		    } else {
-			    state.searchValue = ''
-			    ElMessage.error("搜索失败！")
-		    }
-	    }).catch(error=>{
-		    state.searchValue = ''
-		    ElMessage.error("失败！")
-	    })
-	    state.loading = false
+	    // searchValueWidthOut().setSearchValue(state.searchValue)
+        state.showDiv=false
+	    router.push({
+          path:'/searchResult',
+          query:{
+          	searchValue: state.searchValue
+          }
+        })
+	    // state.loading = true
+	    // goSearch( { searchValue:state.searchValue} ).then((res) => {
+		//     if (res.code === 200) {
+		// 		route.push({path:'/searchResult'})
+        //         // 将搜索结果进行存储，然后传递到searchResult
+        //         console.log("成功")
+		//     } else {
+		// 	    state.searchValue = ''
+		// 	    ElMessage.error("搜索失败！")
+		//     }
+	    // }).catch(error=>{
+		//     state.searchValue = ''
+		//     ElMessage.error("失败！")
+	    // })
+	    // state.loading = false
     }
 
 </script>
@@ -294,7 +308,7 @@
         }
     }
     /*@media (min-width: 1024px) {*/
-    /*    .search{*/
+    /*    .searchResult{*/
     /*        width: 30%;*/
     /*        .wrapper {*/
     /*            padding: 15px;*/
@@ -303,7 +317,7 @@
     /*}*/
 
     /*@media (min-width: 700px) and (max-width: 1024px){*/
-    /*    .search{*/
+    /*    .searchResult{*/
     /*        width: 76%;*/
     /*        left: 12%;*/
     /*        .wrapper {*/
@@ -313,7 +327,7 @@
     /*}*/
 
     /*@media (min-width: 200px) and (max-width: 700px){*/
-    /*    .search{*/
+    /*    .searchResult{*/
     /*        width: 90%;*/
     /*        left: 5%;*/
     /*        .wrapper {*/

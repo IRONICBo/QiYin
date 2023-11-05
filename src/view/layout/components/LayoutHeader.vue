@@ -49,7 +49,7 @@ watch(()=>[state.isLogin],([newIsLogin],[oldIsLogin])=>{
 })
 
     const gotoUser=()=>{
-	//  点击跳转到用户信息页面
+	//  todo 点击跳转到用户信息页面
     }
 
     const handleClick =()=>{
@@ -108,7 +108,7 @@ watch(()=>[state.isLogin],([newIsLogin],[oldIsLogin])=>{
                 <el-avatar :size="35" :src="state.userInfo.avatar" style="margin-right: 6px"/>
                 <span>{{state.userInfo.name || "用户"}}</span>
             </div>
-            <template #dropdown>c
+            <template #dropdown>
                 <el-dropdown-menu>
                     <el-dropdown-item @click="handleClick">登出</el-dropdown-item>
                 </el-dropdown-menu>
@@ -126,6 +126,13 @@ watch(()=>[state.isLogin],([newIsLogin],[oldIsLogin])=>{
 </template>
 
 <style lang="less" scoped>
+    .el-menu-demo{
+        position: fixed;
+        top:0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+    }
     .el-menu--horizontal>.el-menu-item .is-active:nth-child(1){
         align-items:  self-start !important;
         margin-top: 7px;

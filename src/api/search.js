@@ -30,3 +30,19 @@ export const goSearch = (params) => {
 		}
 	})
 }
+
+
+//搜索 用户
+export const goSearchUser = (params) => {
+	return axios({
+		url: "/searchUser",
+		method: "get",
+		params,
+		config: {
+			// headers: {
+			// 	'token': StorageUtil.get('token')
+			// },
+			timeout: 3000
+		}
+	})
+}
