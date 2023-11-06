@@ -44,12 +44,38 @@ const menuList = ref([
         path: '/user'
     },
 ]);
+
+const handleOpen = (key, keyPath) => {
+    console.log(key)
+    if(key == 9) {
+	    router.push({
+          path:'/uploadVideo',
+          query:{
+          	
+          }
+        })
+    }
+    else if(key == 10) {
+        router.push({
+          path:'/personalInfo',
+          query:{
+          	
+          }
+        })
+    }
+
+}
+const handleClose = (key, keyPath) => {
+  console.log(key)
+}
 </script>
 
 <template>
   <el-menu
     default-active="1"
     class="qiyin-aside"
+    @open="handleOpen"
+    @close="handleClose"
   >
     <el-menu-item index="1">
         <el-icon><Opportunity /></el-icon>
@@ -83,6 +109,15 @@ const menuList = ref([
         <el-icon><GoodsFilled /></el-icon>
         <template #title>时尚</template>
     </el-menu-item>
+    <el-menu-item index="9">
+        <el-icon><GoodsFilled /></el-icon>
+        <template #title>发布</template>
+    </el-menu-item>
+    <el-menu-item index="10">
+        <el-icon><GoodsFilled /></el-icon>
+        <template #title>我的</template>
+    </el-menu-item>
+
   </el-menu>
 </template>
 
