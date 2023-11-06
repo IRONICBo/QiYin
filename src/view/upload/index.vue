@@ -1,25 +1,47 @@
 <script setup>
 import { onMounted, ref } from 'vue';
+import { useRouter } from 'vue-router';
 import { UploadFilled } from '@element-plus/icons-vue'
 import { getToken } from '@/api/qiniu';
 import * as qiniu from "qiniu-js";
+import { v4 as uuidv4 } from 'uuid';
+import uploadInfoStoreWidthOut from '@/stores/qiniu'
+import {ElMessage} from "element-plus";
+
+const router = useRouter();
 
 const token = ref('')
-
 const carouselURL = [
     'https://static-file.qiniu.io/www/admin/1695806481/9.27.jpg',
     'http://s3h1q0hvd.bkt.clouddn.com/qiniu_banner.png',
 ]
 const uploadTabs = ref('first')
+const uuidTicket = ref('')
+const coverList = ref([])
+const domain = import.meta.env.VITE_QINIU_FILE_DOMAIN
+const filename = ref('')
+
 
 onMounted(async () => {
-    const res = await getToken()
+    uuidTicket.value = uuidv4()
+    // Get cover url list
+    for (let i = 1; i <= 3; i++) {
+        coverList.value.push(domain + '/' + uuidTicket.value + '_00000' + i + '.jpg')
+    }
+
+    console.log("Get uuidTicket => ",  uuidTicket.value)
+    console.log("Get domain => ",  domain)
+    console.log("Get coverList => ",  coverList.value)
+    const res = await getToken(uuidTicket.value)
     token.value = res.data.upload_token
     console.log("Get QiNiu web token => ",  token.value)
 })
 
 const uploadFile = (file) => {
-    const key = file.name; 
+    const suffix = file.name.split('.').pop();
+    const key = uuidTicket.value + '.' + suffix;
+    filename.value = key
+
     const putExtra = {
         fname: key,
         params: {},
@@ -34,18 +56,31 @@ const uploadFile = (file) => {
         },
         error(err) {
             console.log(err);
+            ElMessage({
+              showClose: true,
+              message: err,
+              type: "error",
+            });
         },
         complete(res) {
             console.log(res);
+            // Store the upload info
+            const uploadInfoStore = uploadInfoStoreWidthOut()
+            uploadInfoStore.setVideoURL(domain + '/' + filename.value)
+            uploadInfoStore.setCoverURLList(coverList.value)
 
-            // TODO:Get the file's url
-            // {
-            //     "key": "7256308498059873594.mp4",
-            //     "hash": "Fp8usdKDgKhlidI4SeV1VebFuXkr",
-            //     "bucket": "1024qiyin",
-            //     "fsize": 1222554,
-            //     "name": "null"
-            // }
+            const videoURL = uploadInfoStore.videoURL
+            const coverURLList = uploadInfoStore.coverURLList
+            console.log("Get videoURL => ",  videoURL)
+            console.log("Get uploadInfoStore => ",  videoURL)
+            console.log("Get coverURLList => ",  coverURLList)
+
+            router.push('/uploadInfo');
+            ElMessage({
+              showClose: true,
+              message: '上传成功，请完善视频信息～',
+              type: "success",
+            });
         }
     };
     const subscription = observable.subscribe(observer);

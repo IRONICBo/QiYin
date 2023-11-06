@@ -152,6 +152,9 @@
         color: black;
 
         .content {
+            border-radius: 10px !important;
+            border: 0px;
+
             background: white;
             border-radius: 2px;
             box-sizing: border-box;

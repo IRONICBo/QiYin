@@ -253,7 +253,10 @@
     /deep/ .el-space__item{
         width: 30%;
     }
+
     .tab-wrapper{
+        border-radius: 10px;
+        border: 0px;
         padding: 20px;
         background: white;
         .demo-tabs > .el-tabs__content {

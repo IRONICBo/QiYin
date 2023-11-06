@@ -1,10 +1,12 @@
 import request from "../utils/request";
 
 // Get Token
-export const getToken = () => {
+export const getToken = (ticket) => {
   return request({
     url: "/qiniu/token",
-    method: "get",
+    method: "post",
+    data: {
+      "ticket": ticket,
+    },
   });
 };
-
