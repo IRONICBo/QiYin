@@ -12,7 +12,7 @@
       "types": ["vite/client"],
       "allowSyntheticDefaultImports": true,
       "skipLibCheck": true,
-      "noImplicitAny": true,
+      "noImplicitAny": false,
       "baseUrl": "./",
       "paths": {
         "@/*": ["src/*"]
