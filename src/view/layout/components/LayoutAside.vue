@@ -8,6 +8,8 @@ import {
   Location,
   Setting,
 } from '@element-plus/icons-vue'
+import {accountStoreWidthOut, loginStoreWidthOut} from "../../../stores/user";
+import {ElMessage} from "element-plus";
 
 const isCollapse = ref(false)
 const router = useRouter();
@@ -47,7 +49,7 @@ const menuList = ref([
 
 const handleOpen = (key, keyPath) => {
     console.log(key)
-    if(key == 9) {
+    if(key === 9) {
 	    router.push({
           path:'/uploadVideo',
           query:{
@@ -55,15 +57,25 @@ const handleOpen = (key, keyPath) => {
           }
         })
     }
-    else if(key == 10) {
-        router.push({
-          path:'/personalInfo',
-          query:{
-          	
-          }
-        })
+    // 跳转到我的页面
+    else if(key === 10) {
+    	// 查看是否是登录状态 如果是才能进行跳转
+      // todo 测一下有用没
+      if(loginStoreWidthOut().getLoginStatus()){
+	      router.push({
+		      path:'/userInfo',
+		      query:{
+			      userId:accountStoreWidthOut().getAccount()
+		      }
+	      })
+      }else{
+	      ElMessage({
+		      showClose: true,
+		      message: "请登录后查看个人信息",
+		      type: "error",
+	      });
+      }
     }
-
 }
 const handleClose = (key, keyPath) => {
   console.log(key)

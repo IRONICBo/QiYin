@@ -9,7 +9,6 @@
                 <div class='fix_b'>
                     <el-button>修改信息</el-button>
                 </div>
-               
             </div>
            
             <el-divider />
