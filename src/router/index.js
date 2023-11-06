@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import LoginView from '../view/LoginView.vue'
+import UploadVideo from '../view/uploadVideo/index.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -24,6 +25,16 @@ const router = createRouter({
           name: 'uploadInfo',
           component: () => import('@/view/uploadInfo/index.vue')
         },
+        {
+          path: '/uploadVideo',
+          name: 'uploadVideo',
+          component: () => import('@/view/uploadVideo/index.vue')
+        },
+        {
+          path: '/personalInfo',
+          name: 'personalInfo',
+          component: () => import('@/view/personalInfo/index.vue')
+        }
       ]
     },
     {
