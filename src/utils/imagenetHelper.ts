@@ -1,11 +1,11 @@
 import _ from 'lodash';
 
 export function softmax(arr: number[]): any {
-  const C = Math.max(...arr);
-  const d = arr.map((y) => Math.exp(y - C)).reduce((a, b) => a + b);
+  const C = Math.max(...arr)
+  const d = arr.map((y) => Math.exp(y - C)).reduce((a, b) => a + b)
   return arr.map((value, index) => {
-    return Math.exp(value - C) / d;
-  });
+    return Math.exp(value - C) / d
+  })
 }
 
 export function imagenetClassesTopK(classProbabilities: any, k = 5) {

@@ -10,3 +10,11 @@ export const getToken = (ticket) => {
     },
   });
 };
+
+// Get proxy image
+export const getProxyImage = (url) => {
+  return request({
+    url: "/qiniu/proxy?url=" + url,
+    method: "get",
+  });
+}

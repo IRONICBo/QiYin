@@ -19,5 +19,8 @@ export default defineConfig({
         // rewrite: (path) => path.replace(/^\/api/, '') // 不可以省略rewrite
       }
     }
+  },
+  define: {
+    'process.env': process.env
   }
 })
