@@ -48,6 +48,11 @@ const handleOpen = (key, keyPath) => {
 		    }
 	    })
     }
+    else if(key === "0" ){
+	    router.push({
+		    path:'/recommend',
+	    })
+    }
 }
 const handleClose = (key, keyPath) => {
   console.log(key)
