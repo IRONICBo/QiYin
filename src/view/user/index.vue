@@ -23,7 +23,7 @@
                         <el-space wrap style="width:100%" size="large">
                             <el-card v-for="(item,index) in state.videoList" :key="index" shadow="always">
                                 <div class="video" @click="gotoVideoInfo(item.id)">
-                                    <el-image :key="url" :src="item.cover_url"  class="img"/>
+                                    <el-image :key="url" :src="item.cover_url"  class="img" fit="cover" />
                                     <div class="com-wrapper">
                                         <div class="com"><el-icon><Star /></el-icon> &nbsp{{item.favorite_count}} </div>
                                         <div class="com"><el-icon><ChatDotRound /></el-icon> &nbsp{{item.comment_count}}</div>
@@ -103,8 +103,8 @@
     import {onBeforeMount} from "@vue/runtime-core";
     import {useRoute} from "vue-router";
 	import {getUserInfo} from "../../api/login";
-		import {ElMessage} from "element-plus";
-		import {getColVideos, getLikeVideos, getVideos} from "../../api/search";
+    import {ElMessage} from "element-plus";
+    import {getColVideos, getLikeVideos, getVideos} from "../../api/search";
     const route = useRoute()
 
     let state = reactive({
@@ -203,17 +203,18 @@
 
 <style scoped lang="less">
     /deep/ .el-space__item{
-        width: 23%;
+        // width: 23%;
     }
     .user-wrapper{
 
         .user-info{
             background: white;
-            padding: 15px;
+            padding: 30px;
             display: flex;
             flex-direction: row;
             align-items: center;
             margin: 10px 0 0 0px;
+            border-radius: 10px;
 
             .info-wrapper{
                 margin-left: 15px;
@@ -243,8 +244,10 @@
 
         .demo-tabs{
             background: white;
-            padding: 15px;
+            padding: 30px;
             margin: 20px 0 0 0px;
+            border-radius: 10px;
+
             .video-cards {
                 .video {
                     justify-content: center;
@@ -256,11 +259,17 @@
                     box-shadow: 2px 2px 7px #939393;
                     overflow: hidden;
 
+                    max-width: 400px;
+                    max-height: 400px;
+
                     .img{
                         transition:all 0.5s;
+                        background-color: #000000;
+                        width: 300px;
+                        height: 300px;
                     }
                     .img:hover{
-                        transform:scale(1.1);
+                        transform:scale(1.05);
                     }
 
                     .com-wrapper{

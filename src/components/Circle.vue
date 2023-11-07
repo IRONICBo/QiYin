@@ -128,4 +128,9 @@
     #chart{
         background: white;
     }
+
+	.el-dialog {
+		border-radius: 10px !important;
+		border: 0px;
+	}
 </style>

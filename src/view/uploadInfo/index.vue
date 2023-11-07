@@ -192,7 +192,7 @@ const chatResp = ref<string[]>(['玛尔济斯，小小身躯蕴藏无尽的可�
                 </span>
                 </el-form-item>
                 <el-form-item label="设置分类🏷️">
-                    <el-select v-model="videoInfo.category" class="" placeholder="设置你的作品类型～">
+                    <el-select v-model="videoInfo.category" placeholder="设置你的作品类型～">
                         <el-option
                             v-for="item in TAGS"
                             :key="item.key"
