@@ -4,7 +4,7 @@ import uploadInfoStoreWidthOut from '@/stores/qiniu'
 // import { inferenceSqueezenet } from '@/utils/predict'
 import * as ort from 'onnxruntime-web'
 import { transformImage, preprocess, predict } from '@/utils/predict'
-import { getProxyImage } from '@/api/qiniu'
+import { getProxyImage, getLLMResponse } from '@/api/qiniu'
 import { TAGS } from '@/constant'
 import { uploadVideoInfo } from '@/api/video'
 import { ElMessage } from "element-plus"
@@ -157,7 +157,25 @@ const onSubmit = () => {
 }
 
 const chatInfo = ref('')
-const chatResp = ref<string[]>(['玛尔济斯，小小身躯蕴藏无尽的可爱与忠诚。', '玛尔济斯，绒毛天使，带来幸福与欢笑。', '玛尔济斯，小小模样，却有着大大的爱意。'])
+const chatResp = ref<string[]>([])
+const submitQuestion = () => {
+    getLLMResponse(chatInfo.value).then((res) => {
+        console.log('getLLMResponse => ', res)
+        chatResp.value = [...chatResp.value, res.data]
+        ElMessage({
+              showClose: true,
+              message: 'AI回复成功！🚀',
+              type: "success",
+        });
+    }).catch((err) => {
+        console.log('getLLMResponse => ', err)
+        ElMessage({
+              showClose: true,
+              message: '呜呜呜 AI回复失败🙅',
+              type: "error",
+        });
+    })
+}
 
 // -------------------QiYin Video End-------------------
 
@@ -232,7 +250,7 @@ const chatResp = ref<string[]>(['玛尔济斯，小小身躯蕴藏无尽的可�
                     <template #header>
                     <div class="chat-card-header">
                         <span>📱AI文案助手</span>
-                        <el-button class="button" text>提问</el-button>
+                        <el-button class="button" text @click="submitQuestion">提问</el-button>
                     </div>
                     </template>
                     <div class="chat-card-response">
