@@ -107,3 +107,19 @@ export const getHistoryVideos = (params) => {
 		}
 	})
 }
+
+
+//根据tag获取视频列表
+export const getTagVideos = (params) => {
+	return axios({
+		url: "/video/searchTag",
+		method: "get",
+		params,
+		config: {
+			headers: {
+				'token': StorageUtil.get('token') || ""
+			},
+			timeout: 3000
+		}
+	})
+}

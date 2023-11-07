@@ -7,6 +7,7 @@ const videoCls = [
 	{ type: 5, label: '美食' },
 	{ type: 6, label: '娱乐' },
 	{ type: 7, label: '时尚' },
+	{ type: 8, label: '其他' },
 ]
 
 const styles = [
@@ -17,6 +18,7 @@ const styles = [
 	{ type: 5, label: '美食' },
 	{ type: 6, label: '娱乐' },
 	{ type: 7, label: '时尚' },
+	{ type: 8, label: '其他' },
 ]
 
 const tags = ["全部","热门","风景","宠物","体育","美食","娱乐","时尚"]
