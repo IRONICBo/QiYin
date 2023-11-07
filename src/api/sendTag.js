@@ -2,17 +2,15 @@ import axios from "../utils/http";
 import StorageUtil from "../utils/localStorage";
 
 // 发送选择标签
-export const getHots = (params) => {
+export const sentTags = (params) => {
 	return axios({
-		url: "/tags",
+		url: "/setStyle",
 		method: "post",
-		params: {
-            'tags': StorageUtil.get('tags')
-        },
+		params,
 		config: {
-			// headers: {
-			// 	'token': StorageUtil.get('token')
-			// },
+			headers: {
+				'token': StorageUtil.get('token')
+			},
 			timeout: 3000
 		}
 	})

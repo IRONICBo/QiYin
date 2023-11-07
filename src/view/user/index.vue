@@ -30,8 +30,7 @@
                                     </div>
                                     <div class="title">{{item.title}}</div>
                                     <div class="user">
-                                        <div @click="gotoUserInfo(item.author.id)" class="user-name">@{{item.author.name}}</div>
-<!--                                        <div class="video-time">{{utils.$time(item.publish_time)}}</div>-->
+                                        <div class="video-time">{{item.publish_time.slice(0,10)}}</div>
                                     </div>
                                 </div>
                             </el-card>
@@ -56,7 +55,7 @@
                                     <div class="title">{{item.title}}</div>
                                     <div class="user">
 <!--                                        <div @click="gotoUserInfo(item.author.id)" class="user-name">@{{item.author.name}}</div>-->
-                                        <div class="video-time">{{utils.$time(item.publish_time)}}</div>
+                                        <div class="video-time">{{item.publish_time.slice(0,10)}}}</div>
                                     </div>
                                 </div>
                             </el-card>
@@ -66,7 +65,7 @@
                 <el-tab-pane name="collection">
                     <template #label>
                         <span class="custom-tabs-label">
-                          <span>喜欢</span>
+                          <span>收藏</span>
                         </span>
                     </template>
                     <div class="video-cards">
@@ -81,7 +80,7 @@
                                     <div class="title">{{item.title}}</div>
                                     <div class="user">
 <!--                                        <div @click="gotoUserInfo(item.author.id)" class="user-name">@{{item.author.name}}</div>-->
-                                        <div class="video-time">{{utils.$time(item.publish_time)}}</div>
+                                        <div class="video-time">{{item.publish_time.slice(0,10)}}</div>
                                     </div>
                                 </div>
                             </el-card>
@@ -203,6 +202,9 @@
 </script>
 
 <style scoped lang="less">
+    /deep/ .el-space__item{
+        width: 23%;
+    }
     .user-wrapper{
 
         .user-info{
