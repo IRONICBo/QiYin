@@ -15,39 +15,6 @@ import StorageUtil from "../../../utils/localStorage";
 const isCollapse = ref(false)
 const router = useRouter();
 
-const menuList = ref([
-    {
-        id: 1,
-        name: 'Dashboard',
-        icon: 'el-icon-s-home',
-        path: '/dashboard'
-    },
-    {
-        id: 2,
-        name: 'Upload',
-        icon: 'el-icon-upload',
-        path: '/upload'
-    },
-    {
-        id: 3,
-        name: 'Download',
-        icon: 'el-icon-download',
-        path: '/download'
-    },
-    {
-        id: 4,
-        name: 'Config',
-        icon: 'el-icon-setting',
-        path: '/config'
-    },
-    {
-        id: 5,
-        name: 'User',
-        icon: 'el-icon-user',
-        path: '/user'
-    },
-]);
-
 const handleOpen = (key, keyPath) => {
     console.log(key)
     // 跳转到信息发布页面
@@ -73,6 +40,13 @@ const handleOpen = (key, keyPath) => {
 		      type: "error",
 	      });
       }
+    }else if(key === "1" || key === "2" || key === "3" || key === "4" || key === "5" || key === "6" || key === "7" ){
+	    router.push({
+		    path:'/videoTag',
+		    query:{
+			    tagId:key
+		    }
+	    })
     }
 }
 const handleClose = (key, keyPath) => {
@@ -82,40 +56,39 @@ const handleClose = (key, keyPath) => {
 
 <template>
   <el-menu
-    default-active="1"
+    default-active="0"
     class="qiyin-aside"
-    @open="handleOpen"
-    @close="handleClose"
+    @select="handleOpen"
   >
-    <el-menu-item index="1">
+    <el-menu-item index="0">
         <el-icon><Opportunity /></el-icon>
         <template #title>推荐</template>
     </el-menu-item>
-    <el-menu-item index="2">
+    <el-menu-item index="1">
         <el-icon><TrendCharts /></el-icon>
         <template #title>热门</template>
     </el-menu-item>
-    <el-menu-item index="3">
+    <el-menu-item index="2">
         <el-icon><VideoCameraFilled /></el-icon>
         <template #title>风景</template>
     </el-menu-item>
-    <el-menu-item index="4">
+    <el-menu-item index="3">
         <el-icon><Ticket /></el-icon>
         <template #title>宠物</template>
     </el-menu-item>
-    <el-menu-item index="5">
+    <el-menu-item index="4">
         <el-icon><Expand /></el-icon>
         <template #title>体育</template>
     </el-menu-item>
-    <el-menu-item index="6">
+    <el-menu-item index="5">
         <el-icon><KnifeFork /></el-icon>
         <template #title>美食</template>
     </el-menu-item>
-    <el-menu-item index="7">
+    <el-menu-item index="6">
         <el-icon><Stamp /></el-icon>
         <template #title>娱乐</template>
     </el-menu-item>
-    <el-menu-item index="8">
+    <el-menu-item index="7">
         <el-icon><GoodsFilled /></el-icon>
         <template #title>时尚</template>
     </el-menu-item>

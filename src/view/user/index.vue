@@ -87,7 +87,7 @@
                         </el-space>
                     </div>
                 </el-tab-pane>
-                <el-tab-pane name="history">
+                <el-tab-pane name="history" v-show="state.my">
                     <template #label>
                         <span class="custom-tabs-label">
                           <span>浏览记录</span>
@@ -130,6 +130,8 @@
 	import {getUserInfo} from "../../api/login";
     import {ElMessage} from "element-plus";
 		import {getColVideos, getHistoryVideos, getLikeVideos, getVideos} from "../../api/search";
+		import {loginStoreWidthOut} from "../../stores/user";
+		import StorageUtil from "../../utils/localStorage";
     const route = useRoute()
 
     let state = reactive({
@@ -143,6 +145,7 @@
         isLike:false,
         isCollected:false,
         isHistory:false,
+        my:loginStoreWidthOut().getLoginStatus && StorageUtil.get("accountId") !== "" || false
     })
 
     const handleClick =(tab)=>{
@@ -207,6 +210,7 @@
             state.isLike =false
             state.isCollected =false
             state.activeName="video"
+	        state.my=loginStoreWidthOut().getLoginStatus && StorageUtil.get("accountId") !== "" || false
             getUser()
         }
     })

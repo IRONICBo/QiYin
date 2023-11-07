@@ -30,15 +30,20 @@ const router = createRouter({
           name: 'uploadVideo',
           component: () => import('@/view/uploadVideo/index.vue')
         },
-        {
-          path: '/personalInfo',
-          name: 'personalInfo',
-          component: () => import('@/view/personalInfo/index.vue')
-        },
+        // {
+        //   path: '/personalInfo',
+        //   name: 'personalInfo',
+        //   component: () => import('@/view/personalInfo/index.vue')
+        // },
         {
           path: '/userInfo',
           name: 'userInfo',
           component: () => import('@/view/user/index.vue')
+        },
+        {
+          path: '/videoTag',
+          name: 'videoTag',
+          component: () => import('@/view/videoTag/index.vue')
         }
       ]
     },

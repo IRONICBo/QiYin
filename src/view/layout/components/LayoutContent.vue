@@ -14,7 +14,7 @@
 <style lang="less" scoped>
 .content-container {
   max-height: 100vh;
-  overflow: auto;
+  /*overflow: auto;*/
 }
 
 .fade-leave-active,

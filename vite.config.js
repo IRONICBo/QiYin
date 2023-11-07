@@ -20,18 +20,18 @@ export default defineConfig({
     //   }
     // }
     proxy: {
-      '/api': {
-        target: 'http://127.0.0.1:8001',
-        changeOrigin: false,
-        // rewrite: (path) => path.replace(/^\/api/, '') // 不可以省略rewrite
-      },
-
       // '/api': {
-      //   target: 'http://127.0.0.1:10010',
-      //   changeOrigin: true,
-      //   secure:false,
-      //   // rewrite: (path) => path.replace(/^\/api/, '')
+      //   target: 'http://127.0.0.1:8001',
+      //   changeOrigin: false,
+      //   // rewrite: (path) => path.replace(/^\/api/, '') // 不可以省略rewrite
       // },
+
+      '/api': {
+        target: 'http://127.0.0.1:10010',
+        changeOrigin: true,
+        secure:false,
+        // rewrite: (path) => path.replace(/^\/api/, '')
+      },
 
       '/chat': { // AI LLM
         target: 'http://127.0.0.1:8002',
