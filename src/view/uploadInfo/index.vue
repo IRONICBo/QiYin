@@ -120,7 +120,7 @@ const videoInfo = reactive({
   desc: '',
   cover: '',
   videoURL: '',
-  category: 1,
+  category: '',
   tag: '',
 })
 
