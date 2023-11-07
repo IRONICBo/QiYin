@@ -8,8 +8,19 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
+      redirect: '/recommend',
       component: () => import('@/view/layout/index.vue'),
       children: [
+        {
+          path: '/recommend',
+          name: 'recommend',
+          component: () => import('@/view/recommend/index.vue')
+        },
+        {
+          path: '/player',
+          name: 'player',
+          component: () => import('@/view/player/index.vue')
+        },
         {
           path: '/upload',
           name: 'upload',
