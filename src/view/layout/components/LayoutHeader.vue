@@ -63,8 +63,12 @@ watch(()=>[state.isLogin],([newIsLogin],[oldIsLogin])=>{
 })
 
     const gotoUser=()=>{
-	//  todo 点击跳转到用户信息页面
-        router.push({path:"/userInfo"})
+	    router.push({
+		    path:'/userInfo',
+		    query:{
+			    userId:StorageUtil.get("accountId")
+		    }
+	    })
     }
 
     const handleClick =()=>{
@@ -126,7 +130,7 @@ const toMe = () => {
 
     <div class="flex-grow" />
 
-    <el-menu-item index="1">
+    <el-menu-item index="1" class="search-menu">
         <Search/>
     </el-menu-item>
 
@@ -189,6 +193,14 @@ const toMe = () => {
         left: 0;
         right: 0;
         z-index: 10;
+
+        .search-menu{
+            align-items: flex-start;
+        }
+        .el-menu-item .is-active .search-menu{
+            align-items: flex-start;
+            margin-top: 8px !important;
+        }
     }
     .el-menu--horizontal>.el-menu-item .is-active:nth-child(1){
         align-items:  self-start !important;
@@ -197,6 +209,10 @@ const toMe = () => {
 
     .el-menu--horizontal .el-menu-item:not(.is-disabled):focus, .el-menu--horizontal .el-menu-item:not(.is-disabled):hover{
         background: rgba(1,1,1,0) !important;
+    }
+
+    .el-menu--horizontal>.el-menu-item.is-active{
+        border-bottom: 0;
     }
     .flex-grow {
       flex-grow: 1;
@@ -210,11 +226,11 @@ const toMe = () => {
     background-color: var(--el-bg-color) !important;
 }
 
-.el-menu-item.is-active {
+.el-menu-item .is-active {
     // cancel choose
     border: 0px !important;
     align-items:  self-start !important;
-    margin-top: 8px;
+    margin-top: 8px !important;
 }
 
 .icon-with-info {

@@ -134,7 +134,7 @@
                         ElMessage.error("账号或验证码错误！")
                     }
                 }).catch(error=>{
-                    ElMessage.error("失败！")
+                    ElMessage.error(error)
                 })
 	            state.loading=false
             }

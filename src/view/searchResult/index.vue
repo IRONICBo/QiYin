@@ -153,7 +153,12 @@
     })
 
     const gotoUserInfo=(userId)=>{
-	    //	todo 跳转到用户详情页面
+	    router.push({
+		    path:'/userInfo',
+		    query:{
+			    userId:userId
+		    }
+	    })
     }
 
     const gotoVideoInfo=(videoId)=>{
