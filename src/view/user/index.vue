@@ -54,7 +54,7 @@
                                     </div>
                                     <div class="title">{{item.title}}</div>
                                     <div class="user">
-<!--                                        <div @click="gotoUserInfo(item.author.id)" class="user-name">@{{item.author.name}}</div>-->
+                                        <div @click="gotoUserInfo(item.author.id)" class="user-name">@{{item.author.name}}</div>
                                         <div class="video-time">{{item.publish_time.slice(0,10)}}}</div>
                                     </div>
                                 </div>
@@ -79,7 +79,32 @@
                                     </div>
                                     <div class="title">{{item.title}}</div>
                                     <div class="user">
-<!--                                        <div @click="gotoUserInfo(item.author.id)" class="user-name">@{{item.author.name}}</div>-->
+                                        <div @click="gotoUserInfo(item.author.id)" class="user-name">@{{item.author.name}}</div>
+                                        <div class="video-time">{{item.publish_time.slice(0,10)}}</div>
+                                    </div>
+                                </div>
+                            </el-card>
+                        </el-space>
+                    </div>
+                </el-tab-pane>
+                <el-tab-pane name="history">
+                    <template #label>
+                        <span class="custom-tabs-label">
+                          <span>浏览记录</span>
+                        </span>
+                    </template>
+                    <div class="video-cards">
+                        <el-space wrap style="width:100%" size="large">
+                            <el-card v-for="(item,index) in state.hisVideos" :key="index" shadow="always">
+                                <div class="video" @click="gotoVideoInfo(item.id)">
+                                    <el-image :key="url" :src="item.cover_url"  class="img"/>
+                                    <div class="com-wrapper">
+                                        <div class="com"><el-icon><Star /></el-icon> &nbsp{{item.favorite_count}} </div>
+                                        <div class="com"><el-icon><ChatDotRound /></el-icon> &nbsp{{item.comment_count}}</div>
+                                    </div>
+                                    <div class="title">{{item.title}}</div>
+                                    <div class="user">
+                                        <div @click="gotoUserInfo(item.author.id)" class="user-name">@{{item.author.name}}</div>
                                         <div class="video-time">{{item.publish_time.slice(0,10)}}</div>
                                     </div>
                                 </div>
@@ -104,7 +129,7 @@
     import {useRoute} from "vue-router";
 	import {getUserInfo} from "../../api/login";
     import {ElMessage} from "element-plus";
-    import {getColVideos, getLikeVideos, getVideos} from "../../api/search";
+		import {getColVideos, getHistoryVideos, getLikeVideos, getVideos} from "../../api/search";
     const route = useRoute()
 
     let state = reactive({
@@ -113,9 +138,11 @@
         videoList:[],
         likeVideos:[],
         colVideos:[],
+        hisVideos:[],
 	    activeName:"video",
         isLike:false,
         isCollected:false,
+        isHistory:false,
     })
 
     const handleClick =(tab)=>{
@@ -123,8 +150,10 @@
         //	 如果是user  则需要查询
         if(tab.props.name === "like" &&  !state.isLike){
             getLikeVideo()
-        }else if(tab.props.name === "video" && !state.isCollected){
+        }else if(tab.props.name === "collection" && !state.isCollected){
             getCollVideo()
+        }else if(tab.props.name === "history" && !state.isHistory){
+            getHisVideo()
         }
     }
 
@@ -154,6 +183,19 @@
 	    })
     }
 
+    const getHisVideo=()=>{
+	    getHistoryVideos().then((res) => {
+		    if (res.code === 200) {
+			    state.hisVideos = res.data || []
+                state.isHistory=true
+		    } else {
+			    ElMessage.error("搜索失败！")
+		    }
+	    }).catch(error=>{
+		    ElMessage.error("失败！")
+	    })
+    }
+
     onBeforeMount(() => {
         getUser()
     })
@@ -170,7 +212,11 @@
     })
 
     const gotoVideoInfo=(videoId)=>{
-    //	 todo 跳转到
+    //	 sessionStorage 跳转到
+    }
+
+    const gotoUserInfo =(userId)=>{
+
     }
     const getUser=()=>{
     	if(state.userId !== ""){

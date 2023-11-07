@@ -91,3 +91,19 @@ export const getColVideos = (params) => {
 		}
 	})
 }
+
+
+//根据id获取喜爱列表
+export const getHistoryVideos = (params) => {
+	return axios({
+		url: "video/getHistory",
+		method: "get",
+		params,
+		config: {
+			headers: {
+				'token': StorageUtil.get('token')
+			},
+			timeout: 3000
+		}
+	})
+}

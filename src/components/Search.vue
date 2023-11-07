@@ -8,6 +8,7 @@
                     :placeholder="state.placeholder"
                     @keyup.enter="send"
                     :disabled="state.loading"
+                    id="search"
             >
                 <template #append  style="cursor: pointer">
                     <el-button type="danger" @click="send" v-if="!state.loading">
@@ -102,7 +103,7 @@
 	})
 
     const handlerClick =(e)=>{
-          if (e.target.className === "el-input__inner" || e.target.getAttribute("tabindex") === 0){
+          if (e.target.id === "search"){
               state.showDiv = true
               return
           }
@@ -215,6 +216,7 @@
         width: 400px;
         background: white;
         line-height: normal;
+        margin-top: 8px;
 
 
         .input{
