@@ -1,5 +1,5 @@
 <script setup>
-	import {ref, watch} from 'vue';
+import {ref, watch} from 'vue';
 import { computed, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import Search from '../../../components/Search.vue'
@@ -7,10 +7,13 @@ import Circle from '../../../components/Circle.vue'
 import LoginDialog from '../../../components/LoginDialog.vue'
 import {checkToken, getUserInfo} from '../../../api/login'
 import {loginStoreWidthOut} from '../../../stores/user';
+import {ElMessage, ElMessageBox} from "element-plus";
 
 import { reactive} from "vue";
 import StorageUtil from "../../../utils/localStorage";
 import SessionStorageUtil from "../../../utils/sessionStorage";
+
+const router = useRouter();
 const state = reactive({
 	isLoginVisible:false,
 	isLogin:false,
@@ -70,6 +73,39 @@ watch(()=>[state.isLogin],([newIsLogin],[oldIsLogin])=>{
       loginStoreWidthOut().setLoginStatus(false)
       state.isLogin =false
     }
+
+const toInfo = () => {
+    ElMessageBox({
+        title: "关于柒音",
+        showClose: true,
+        dangerouslyUseHTMLString: true,
+        message: `
+        <pre>
+比赛官网：https://www.qiniu.com
+
+前端：https://github.com/IRONICBo/QiYin
+后端：https://github.com/IRONICBo/QiYin_BE
+算法：https://github.com/IRONICBo/QiYin_AI
+
+Contributor: @IRONICBo @Baihhh @nnnnn319
+        </pre>
+        `,
+    });
+}
+const toUpload = () => {
+    router.push({path:"/upload"})
+}
+const toHome = () => {
+    router.push({path:"/"})
+}
+const toMe = () => {
+    router.push({
+        path:'/userInfo',
+        query:{
+            userId:StorageUtil.get("accountId")
+        }
+    })
+}
 </script>
 
 <template>
@@ -97,17 +133,21 @@ watch(()=>[state.isLogin],([newIsLogin],[oldIsLogin])=>{
     <div class="flex-grow" />
     
     <el-menu-item index="2">
-        <span class="icon-with-info">
+        <span class="icon-with-info" @click="toInfo">
             <el-icon><InfoFilled /></el-icon>
             <span class="icon-info">关于</span>
         </span>
-        <span class="icon-with-info">
+        <span class="icon-with-info" @click="toUpload">
             <el-icon><HelpFilled /></el-icon>
-            <span class="icon-info">稿件</span>
+            <span class="icon-info">投稿</span>
         </span>
-        <span class="icon-with-info">
+        <span class="icon-with-info" @click="toHome">
             <el-icon><Promotion /></el-icon>
             <span class="icon-info">柒音</span>
+        </span>
+        <span v-if="!state.isLoginVisible" class="icon-with-info" @click="toMe">
+            <el-icon><UserFilled /></el-icon>
+            <span class="icon-info">我的</span>
         </span>
     </el-menu-item>
 

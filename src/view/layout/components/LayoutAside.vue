@@ -50,12 +50,10 @@ const menuList = ref([
 
 const handleOpen = (key, keyPath) => {
     console.log(key)
+    // 跳转到信息发布页面
     if(key === "9") {
 	    router.push({
-          path:'/uploadVideo',
-          query:{
-          	
-          }
+          path:'/upload',
         })
     }
     // 跳转到我的页面
@@ -121,12 +119,14 @@ const handleClose = (key, keyPath) => {
         <el-icon><GoodsFilled /></el-icon>
         <template #title>时尚</template>
     </el-menu-item>
+
+    <el-divider />
     <el-menu-item index="9">
-        <el-icon><GoodsFilled /></el-icon>
-        <template #title>发布</template>
+        <el-icon><HelpFilled /></el-icon>
+        <template #title>投稿</template>
     </el-menu-item>
-    <el-menu-item index="10">
-        <el-icon><GoodsFilled /></el-icon>
+    <el-menu-item index="10" style="">
+        <el-icon><UserFilled /></el-icon>
         <template #title>我的</template>
     </el-menu-item>
 
