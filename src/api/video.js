@@ -39,3 +39,19 @@ export const getRecommendList = (params) => {
 		}
 	})
 }
+
+
+//
+export const getVideo = (params) => {
+	return axios({
+		url: "/video/getVideo",
+		method: "get",
+		params,
+		config: {
+			headers: {
+				'token': StorageUtil.get('token')
+			},
+			timeout: 3000
+		}
+	})
+}

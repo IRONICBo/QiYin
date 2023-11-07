@@ -16,3 +16,18 @@ export const favoriteAction = (params) => {
 		}
 	})
 }
+
+//收藏
+export const collectionAction = (params) => {
+	return axios({
+		url: "/collection/action",
+		method: "post",
+		params,
+		config: {
+			headers: {
+				'token': StorageUtil.get('token')
+			},
+			timeout: 3000
+		}
+	})
+}

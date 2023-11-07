@@ -52,11 +52,6 @@
         }
     })
 
-    const gotoVideoInfo=(videoId)=>{
-    //	 sessionStorage 跳转到
-    }
-
-
     const getVideoList=()=>{
       if(state.tagId && state.tagId !== ""){
 	      getTagVideos({tag:state.tagId}).then((res) => {
@@ -70,6 +65,16 @@
 	      })
       }
     }
+
+		const gotoVideoInfo=(videoId)=>{
+			//	todo 跳转到视频详情页面
+			router.push({
+				path:'/player',
+				query:{
+					videoId:videoId
+				}
+			})
+		}
 </script>
 
 <style scoped lang="less">

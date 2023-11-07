@@ -163,6 +163,12 @@
 
     const gotoVideoInfo=(videoId)=>{
 	    //	todo 跳转到视频详情页面
+	    router.push({
+		    path:'/player',
+		    query:{
+					    videoId:videoId
+		    }
+	    })
     }
 
     const handerTag=(tagId)=>{
