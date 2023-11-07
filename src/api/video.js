@@ -24,3 +24,18 @@ export const uploadVideoInfo = (params) => {
 		}
 	})
 }
+
+// 获取推荐视频
+export const getRecommendList = (params) => {
+	return axios({
+		url: "/video/lists",
+		method: "get",
+		params,
+		config: {
+			headers: {
+				'token': StorageUtil.get('token')
+			},
+			timeout: 3000
+		}
+	})
+}

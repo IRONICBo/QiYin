@@ -129,7 +129,7 @@
     import {useRoute} from "vue-router";
 	import {getUserInfo} from "../../api/login";
     import {ElMessage} from "element-plus";
-		import {getColVideos, getHistoryVideos, getLikeVideos, getVideos} from "../../api/search";
+    import {getColVideos, getHistoryVideos, getLikeVideos, getVideos} from "../../api/search";
     const route = useRoute()
 
     let state = reactive({
