@@ -50,6 +50,7 @@ watch(()=>[state.isLogin],([newIsLogin],[oldIsLogin])=>{
 
     const gotoUser=()=>{
 	//  todo 点击跳转到用户信息页面
+        router.push({path:"/userInfo"})
     }
 
     const handleClick =()=>{

@@ -17,6 +17,11 @@ export default defineConfig({
         target: 'http://127.0.0.1:8001',
         changeOrigin: false,
         // rewrite: (path) => path.replace(/^\/api/, '') // 不可以省略rewrite
+      },
+      '/chat': { // AI LLM
+        target: 'http://127.0.0.1:8002',
+        changeOrigin: false,
+        // rewrite: (path) => path.replace(/^\/api/, '') // 不可以省略rewrite
       }
     }
   },

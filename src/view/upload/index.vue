@@ -6,10 +6,9 @@ import { getToken } from '@/api/qiniu';
 import * as qiniu from "qiniu-js";
 import { v4 as uuidv4 } from 'uuid';
 import uploadInfoStoreWidthOut from '@/stores/qiniu'
-import {ElMessage} from "element-plus";
+import { ElMessage } from "element-plus";
 
 const router = useRouter();
-
 const token = ref('')
 const carouselURL = [
     'https://static-file.qiniu.io/www/admin/1695806481/9.27.jpg',
@@ -21,6 +20,7 @@ const coverList = ref([])
 const domain = import.meta.env.VITE_QINIU_FILE_DOMAIN
 const filename = ref('')
 
+const loading = ref(false)
 
 onMounted(async () => {
     uuidTicket.value = uuidv4()
@@ -38,6 +38,7 @@ onMounted(async () => {
 })
 
 const uploadFile = (file) => {
+    loading.value = true
     const suffix = file.name.split('.').pop();
     const key = uuidTicket.value + '.' + suffix;
     filename.value = key
@@ -62,7 +63,7 @@ const uploadFile = (file) => {
               type: "error",
             });
         },
-        complete(res) {
+        async complete(res) {
             console.log(res);
             // Store the upload info
             const uploadInfoStore = uploadInfoStoreWidthOut()
@@ -74,6 +75,11 @@ const uploadFile = (file) => {
             console.log("Get videoURL => ",  videoURL)
             console.log("Get uploadInfoStore => ",  videoURL)
             console.log("Get coverURLList => ",  coverURLList)
+
+            // wait for qiniu upload complete
+            // TODO: delay for 10s
+            await sleep(10000)
+            loading.value = false
 
             router.push('/uploadInfo');
             ElMessage({
@@ -90,10 +96,13 @@ const handleFileUpload = (params) => {
     uploadFile(params.file);
 }
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 </script>
 
 <template>
-    <el-card class="upload">
+    <el-card class="upload" v-loading="loading" element-loading-text="🚀🚀🚀 上传中...">
         <el-carousel height="160px">
             <el-carousel-item v-for="url in carouselURL" :key="url">
                 <el-image :src="url" :fit="cover" />
