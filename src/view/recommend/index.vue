@@ -106,7 +106,8 @@ const judgePlay = (e) => {
     console.log(e)
     console.log("currentActiveItem.value=>", currentActiveItem.value)
     console.log(videoURLS.value[currentActiveItem.value].id == e.id)
-    return videoURLS.value[currentActiveItem.value].id == e.id
+    // return videoURLS.value[currentActiveItem.value].id == e.id
+    return false
 }
 </script>
 
@@ -115,6 +116,7 @@ const judgePlay = (e) => {
         <el-carousel
             ref="remarkCarousel"
             height="90vh"
+            :initial-index="currentActiveItem"
             :interval="0"
             direction="vertical"
             :autoplay="false">
@@ -123,7 +125,7 @@ const judgePlay = (e) => {
                     class="qiniu-video-player"
                     :src="video.play_url"
                     controls
-                    :autoplay="judgePlay(video)"
+                    :autoplay="false"
                     :playbackRate="videoPlayBackRate"
                     :loop="true"
                     :volume="0.6"
