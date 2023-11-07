@@ -18,3 +18,12 @@ export const getProxyImage = (url) => {
     method: "get",
   });
 }
+
+// Get LLM response
+export const getLLMResponse = (question) => {
+  return request({
+    baseURL: "/chat",
+    url: "/info?question=" + question,
+    method: "get",
+  });
+}
