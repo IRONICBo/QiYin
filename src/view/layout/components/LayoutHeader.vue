@@ -3,19 +3,26 @@
 import { computed, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import Search from '../../../components/Search.vue'
+import Circle from '../../../components/Circle.vue'
 import LoginDialog from '../../../components/LoginDialog.vue'
 import {checkToken, getUserInfo} from '../../../api/login'
 import {loginStoreWidthOut} from '../../../stores/user';
 
 import { reactive} from "vue";
 import StorageUtil from "../../../utils/localStorage";
+import SessionStorageUtil from "../../../utils/sessionStorage";
 const state = reactive({
 	isLoginVisible:false,
 	isLogin:false,
-    userInfo:{}
+    userInfo:{},
+	styleVisible:false
 })
 const changeVisible=(val)=>{
 	state.isLoginVisible=val
+}
+
+const changeStyleVisible=(val)=>{
+    state.styleVisible=val
 }
 
 const changeLogin=(val)=>{
@@ -29,6 +36,10 @@ const check =()=>{
             state.isLogin = true
 	        loginStoreWidthOut().setLoginStatus(true)
             state.userInfo = res.data
+          //说明没有选择风格
+          if ((res.data.style === null || res.data.style=== 0  || res.data.style=== "" )&& !SessionStorageUtil.get('style')){
+          	state.styleVisible=true
+          }
         } else {
             console.log("登录失败")
         }
@@ -123,6 +134,11 @@ watch(()=>[state.isLogin],([newIsLogin],[oldIsLogin])=>{
         :visible="state.isLoginVisible"
         @changeVisible="changeVisible"
         @changeLogin="changeLogin"
+    />
+
+    <Circle
+        :visible="state.styleVisible"
+        @changeVisible="changeStyleVisible"
     />
 </template>
 

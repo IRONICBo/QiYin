@@ -2,6 +2,7 @@
 	import LoginDialog from '../components/LoginDialog.vue'
 	import CommentDrawer from '../components/CommentDrawer.vue'
 	import Search from '../components/Search.vue'
+	import Circle from '../components/Circle.vue'
 
     import { reactive} from "vue";
 		import {favoriteAction} from "../api/favorite";
@@ -41,19 +42,17 @@
         <button @click="favorite">{{state.canFavorite === 1? "点赞":"取消点赞"}}</button>
         <div>
             <Search></Search>
+            <Circle :visible="s"/>
         </div>
+
     </div>
-<!--    <LoginDialog-->
-<!--        title="登录"-->
-<!--        subtitle="收藏点赞评论随心发"-->
-<!--        :visible="state.isLoginVisible"-->
-<!--        @changeVisible="changeVisible"-->
-<!--    />-->
     <CommentDrawer
             :modelVisible="state.commentVisible"
             @changeVisible="closeComments"
             :videoId="state.videoId"
     />
+
+
 </template>
 
 <style>

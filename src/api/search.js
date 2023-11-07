@@ -54,9 +54,9 @@ export const getVideos = (params) => {
 		method: "get",
 		params,
 		config: {
-			// headers: {
-			// 	'token': StorageUtil.get('token')
-			// },
+			headers: {
+				'token': StorageUtil.get('token')
+			},
 			timeout: 3000
 		}
 	})
@@ -69,9 +69,9 @@ export const getLikeVideos = (params) => {
 		method: "get",
 		params,
 		config: {
-			// headers: {
-			// 	'token': StorageUtil.get('token')
-			// },
+			headers: {
+				'token': StorageUtil.get('token')
+			},
 			timeout: 3000
 		}
 	})
@@ -84,9 +84,9 @@ export const getColVideos = (params) => {
 		method: "get",
 		params,
 		config: {
-			// headers: {
-			// 	'token': StorageUtil.get('token')
-			// },
+			headers: {
+				'token': StorageUtil.get('token')
+			},
 			timeout: 3000
 		}
 	})

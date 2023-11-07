@@ -25,6 +25,9 @@
                     <el-form-item label="确认密码：" prop="passwordCom" v-if="state.register">
                         <el-input v-model="user.passwordCom" type="password" placeholder="请确认密码" maxlength="20" show-password clearable prefix-icon="Key" />
                     </el-form-item>
+                    <el-form-item label="签名：" prop="signature" v-if="state.register">
+                        <el-input v-model="user.signature" placeholder="写下你独一无二的介绍吧~" maxlength="20" :rows="2" clearable type="textarea"/>
+                    </el-form-item>
                     <el-button class="btn" type="primary" :loading="state.loading" :loading-icon="Eleme" @click="onSubmit(ruleFormRef)" style="transform:translate(15px);">{{state.register?"注册":"登录"}}</el-button>
                     <div style="text-align: right">
                         <el-link type="warning" @click="changeRegist">{{state.register?"登录":"没有账号？去注册"}}</el-link>
@@ -59,6 +62,7 @@
         name: '',
         password: '',
         passwordCom:'',
+	    signature:'',
     })
     const validatePassword= (rule, value, callback)=>{
         if (value === '') {
@@ -112,7 +116,7 @@
             if (valid) {
             	let submit = state.register ? register:login
             	state.loading=true
-	            submit( {name:user.name,password:user.password} ).then((res) => {
+	            submit( {name:user.name,password:user.password,signature:user.signature} ).then((res) => {
                     if (res.code === 200) {
                         ElMessage({
                             message: '成功',
@@ -124,6 +128,7 @@
 	                    state.register ? state.register=!state.register:cancel()
                         if(!state.register){
 	                        emits('changeLogin', true)
+                        //   查看是否选择了风格
                         }
                     } else {
                         ElMessage.error("账号或验证码错误！")

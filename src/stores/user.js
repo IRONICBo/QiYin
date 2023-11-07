@@ -60,7 +60,7 @@ export const accountStore = defineStore({
 export const loginStore = defineStore({
   id: 'login',
   state: () => ({
-    isLogin: null,
+    isLogin: false,
   }),
   getters: {
     getLoginStatus() {
@@ -79,6 +79,34 @@ export const loginStore = defineStore({
         key: 'isLogin',
         storage: localStorage,
         paths: ['isLogin'],
+      },
+    ],
+  },
+});
+
+
+export const styleStore = defineStore({
+  id: 'style',
+  state: () => ({
+    isStyle: false,
+  }),
+  getters: {
+    getStyleStatus() {
+      return this.isStyle;
+    },
+  },
+  actions: {
+    setStyleStatus(isStyle) {
+      this.isStyle = isStyle;
+    },
+  },
+  persist: {
+    enabled: true,
+    strategies: [
+      {
+        key: 'isStyle',
+        storage: sessionStorage,
+        paths: ['isStyle'],
       },
     ],
   },
